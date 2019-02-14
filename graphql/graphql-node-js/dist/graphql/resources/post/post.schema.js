@@ -21,7 +21,7 @@ const postTypes = `
 `;
 exports.postTypes = postTypes;
 const postQueries = `
-    posts(first: int, offset: int): [ Post! ]!
+    posts(first: Int, offset: Int): [ Post! ]!
     post(id: ID!): Post
 `;
 exports.postQueries = postQueries;

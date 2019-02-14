@@ -1,7 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 const commentTypes = `
-    type comment {
+    type Comment {
         id: ID!
         comment: String!
         createdAt: String!
@@ -10,10 +10,10 @@ const commentTypes = `
         post: Post!
     }
 
-    input commentInput {
+    input CommentInput {
         comment: String!
         post: Int!
-        user: inst!
+        user: Int!
     }
 `;
 exports.commentTypes = commentTypes;

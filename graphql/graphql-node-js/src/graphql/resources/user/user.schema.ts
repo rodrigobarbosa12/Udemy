@@ -28,7 +28,7 @@ const userTypes = `
 `;
 
 const userQueries = `
-    users(first: int, offset: int): [ User ]!
+    users(first: Int, offset: Int): [ User ]!
     user(id: ID!): User
 `;
 

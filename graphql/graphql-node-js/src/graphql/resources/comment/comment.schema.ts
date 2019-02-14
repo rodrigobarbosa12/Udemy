@@ -1,5 +1,5 @@
 const commentTypes = `
-    type comment {
+    type Comment {
         id: ID!
         comment: String!
         createdAt: String!
@@ -8,10 +8,10 @@ const commentTypes = `
         post: Post!
     }
 
-    input commentInput {
+    input CommentInput {
         comment: String!
         post: Int!
-        user: inst!
+        user: Int!
     }
 `;
 
