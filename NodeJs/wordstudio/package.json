@@ -5,11 +5,18 @@
   "main": "index.js",
   "author": "Rodrigo barbosa",
   "license": "MIT",
+  "scripts": {
+    "build": "babel app/index.js -d lib/",
+    "prepublish": "yarn run build"
+  },
   "dependencies": {
     "axios": "^0.18.0",
     "qs": "^6.5.2"
   },
   "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-flow": "^6.23.0",
+    "flow-bin": "^0.93.0",
     "webpack-cli": "^3.2.3"
   }
 }
