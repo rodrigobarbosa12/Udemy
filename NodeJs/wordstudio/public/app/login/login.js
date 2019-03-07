@@ -3,6 +3,16 @@
 import xhr from '../../utils/xhr';
 import { type Cadastro } from './types';
 
+
+export default class Login {
+    url: string;
+    
+    constructor(url: string) {
+        this.url = url;
+    }
+
+};
+
 const listarUsuarios = async () => {
     try {
         const { data: { users } } = await xhr.get('/users/');

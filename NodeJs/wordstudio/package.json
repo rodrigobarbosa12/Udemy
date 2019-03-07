@@ -6,7 +6,7 @@
   "author": "Rodrigo barbosa",
   "license": "MIT",
   "scripts": {
-    "build": "babel app/index.js -d lib/",
+    "build": "babel public/app/index.js -d lib/",
     "prepublish": "yarn run build"
   },
   "dependencies": {
@@ -16,7 +16,9 @@
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-preset-flow": "^6.23.0",
-    "flow-bin": "^0.93.0",
+    "eslint-plugin-flowtype": "^3.2.0",
+    "flow-bin": "^0.89.0",
+    "flow-typed": "^2.5.1",
     "webpack-cli": "^3.2.3"
   }
 }

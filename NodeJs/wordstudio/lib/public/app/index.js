@@ -1,18 +1,16 @@
-/* @flow */
-
 import xhr from '../../utils/xhr';
-import { type Cadastro } from './types';
+import './types';
 
 const listarUsuarios = async () => {
     try {
         const { data: { users } } = await xhr.get('/users/');
-        return users
+        return users;
     } catch (error) {
         alert(error);
     }
 };
 
-const cadastrarUsuario = async (dados) => {
+const cadastrarUsuario = async dados => {
     try {
         await xhr.post('/users/', dados);
     } catch (error) {
@@ -20,7 +18,7 @@ const cadastrarUsuario = async (dados) => {
     }
 };
 
-const apagarUsuario = async (id) => {
+const apagarUsuario = async id => {
     try {
         await xhr.delete(`/users/${id}`);
     } catch (error) {
@@ -28,9 +26,9 @@ const apagarUsuario = async (id) => {
     }
 };
 
-const editarUsuario = async (usuarios: Cadastro, dados) => {
+const editarUsuario = async (usuarios, dados) => {
     console.log(usuarios);
-    usuarios.forEach(async (usuario) => {
+    usuarios.forEach(async usuario => {
         try {
             await xhr.put(`/users/${usuario._id}`, dados);
         } catch (error) {
@@ -38,7 +36,6 @@ const editarUsuario = async (usuarios: Cadastro, dados) => {
         }
     });
 };
-
 
 const init = async (cadastro, editar) => {
     // cadastrarUsuario(cadastro);
@@ -50,17 +47,16 @@ const init = async (cadastro, editar) => {
     // apagarUsuario('');
 };
 
-
 const cadastro = {
     nome: "Rodrigo Barbosa",
     email: "rodrigocorsarios@hotmail.com",
-    senha: "RodrigoLindao",
+    senha: "RodrigoLindao"
 };
 
 const editar = {
     nome: "Fui editado",
     email: "rodrigocorsarios@hotmail.com",
-    senha: "RodrigoLindao",
+    senha: "RodrigoLindao"
 };
 
 init(cadastro, editar);
